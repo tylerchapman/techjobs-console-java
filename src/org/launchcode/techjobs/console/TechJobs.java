@@ -2,6 +2,7 @@ package org.launchcode.techjobs.console;
 
 import java.util.*;
 
+import static org.launchcode.techjobs.console.JobData.findByColumnAndValue;
 import static org.launchcode.techjobs.console.JobData.findByValue;
 
 /**
@@ -63,7 +64,7 @@ public class TechJobs {
                 if (searchField.equals("all")) {
                     printJobs(findByValue(searchTerm));
                 } else {
-                    printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
+                    printJobs(findByColumnAndValue(searchField, searchTerm));
                 }
             }
         }
